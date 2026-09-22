@@ -23,6 +23,7 @@ DEFAULT_MODEL = ROOT / "llm_runs" / "20260922T173848_430218Z" / "model.pt"
 LOG_PATH = Path(__file__).resolve().parent / "webapp_chat_log.json"
 
 app = Flask(__name__)
+app.config["TEMPLATES_AUTO_RELOAD"] = True  # edit index.html and just refresh, no restart
 state = {"model": None, "vocabulary": None, "saved": None, "turns": 0}
 
 
@@ -53,6 +54,13 @@ def info():
         "block_size": model.config.block_size,
         "model_path": state["model_path"],
     })
+
+
+@app.get("/api/vocab")
+def vocab():
+    special = {"<UNK>", "<BOS>", "<EOS>"}
+    words = sorted(t for t in state["vocabulary"] if t not in special)
+    return jsonify({"words": words})
 
 
 @app.post("/api/chat")

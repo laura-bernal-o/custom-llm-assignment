@@ -14,5 +14,61 @@
       "she"
     ],
     "prompt_truncated": false
+  },
+  {
+    "prompt": "she is happy",
+    "seed": 2026,
+    "response": "grown the opposite of a discussion of code .",
+    "unknown_prompt_words": [
+      "happy",
+      "she"
+    ],
+    "prompt_truncated": false
+  },
+  {
+    "prompt": "the customer",
+    "seed": 2027,
+    "response": "returned the offering after checking the price .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "prompt": "leo did not buy the",
+    "seed": 2026,
+    "response": "bike .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "prompt": "the report about the",
+    "seed": 2026,
+    "response": "product explains the quality in detail .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "prompt": "we learned about the new",
+    "seed": 2027,
+    "response": "credit during a discussion of return .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "prompt": "the girl",
+    "seed": 2028,
+    "response": "mentioned in the opposite of a review of risk .",
+    "unknown_prompt_words": [
+      "girl"
+    ],
+    "prompt_truncated": false
+  },
+  {
+    "prompt": "the girl",
+    "seed": 2029,
+    "response": "on learning during a review of student .",
+    "unknown_prompt_words": [
+      "girl"
+    ],
+    "prompt_truncated": false
   }
 ]
