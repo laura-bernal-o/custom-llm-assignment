@@ -327,6 +327,35 @@ cell — 3 separate prompts are run there in each experiment (visible directly
 in both executed `.ipynb` files and each run's own
 `chat_transcript.json`), independent of the 4-turn terminal transcript above.
 
+### Bonus: web chat interface
+
+Beyond the required terminal/notebook interfaces, [`webapp/`](webapp/) has a
+small local web page for the same model. It's a thin wrapper, not a new
+inference path: `webapp/server.py` is a Flask app that calls the *exact same*
+`load_model` / `generate_reply` functions from [`run_evals.py`](run_evals.py)
+that `chat.py` uses — no retraining, no new model logic, fresh 48-token
+context per message, same as every other interface here.
+
+**Launch:**
+```sh
+pip install -r webapp/requirements.txt
+python webapp/server.py --model llm_runs/20260922T173848_430218Z/model.pt --port 5050
+# then open http://localhost:5050
+```
+
+The page's header pulls `/api/info` and states the run hash, step count,
+vocabulary size, and context limit up front, and shows an inline
+"Unknown words (treated as `<UNK>`)" notice per reply — the same honesty
+about limitations as the terminal, just in the browser. I tested it live
+(golden path + the same pronoun out-of-vocabulary case as above) before
+committing; both exchanges are saved in
+[`webapp/webapp_chat_log.json`](webapp/webapp_chat_log.json):
+
+| You | Model | Notice |
+|---|---|---|
+| `the customer` | `selected the item after checking the price .` | — |
+| `maya did not want the soda . she wanted` | `the bank .` | Unknown word: `she` |
+
 ## What I learned
 
 1. **Corpus and held-out data.** My corpus is ~4,600–5,200 short, highly

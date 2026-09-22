@@ -1,0 +1,18 @@
+[
+  {
+    "prompt": "the customer",
+    "seed": 2026,
+    "response": "selected the item after checking the price .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "prompt": "maya did not want the soda . she wanted",
+    "seed": 2027,
+    "response": "the bank .",
+    "unknown_prompt_words": [
+      "she"
+    ],
+    "prompt_truncated": false
+  }
+]

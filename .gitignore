@@ -3,6 +3,7 @@ __pycache__/
 .venv/
 names.txt
 .DS_Store
+.claude/
 
 # This is a submission repo, not the dev template: results, corpus, and
 # outputs are the graded deliverables and are intentionally tracked here.

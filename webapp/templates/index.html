@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tiny nanoGPT chat</title>
+<style>
+  :root {
+    --bg: #0f1115; --panel: #171a21; --border: #2a2f3a; --text: #e6e8ec;
+    --muted: #8b93a1; --accent: #5b8def; --user-bubble: #2a3550; --model-bubble: #1f2430;
+    --warn: #caa04a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    display: flex; flex-direction: column; height: 100vh;
+  }
+  header {
+    padding: 14px 20px; border-bottom: 1px solid var(--border); background: var(--panel);
+  }
+  header h1 { margin: 0 0 4px; font-size: 17px; }
+  header p { margin: 0; font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+  #meta { font-family: ui-monospace, monospace; }
+  #chat {
+    flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 12px;
+  }
+  .row { display: flex; }
+  .row.user { justify-content: flex-end; }
+  .bubble {
+    max-width: 70%; padding: 10px 14px; border-radius: 14px; font-size: 14.5px; line-height: 1.5;
+    white-space: pre-wrap; word-break: break-word;
+  }
+  .row.user .bubble { background: var(--user-bubble); border-bottom-right-radius: 4px; }
+  .row.model .bubble { background: var(--model-bubble); border-bottom-left-radius: 4px; }
+  .notice { font-size: 12px; color: var(--warn); margin-top: 6px; }
+  #inputBar {
+    display: flex; gap: 10px; padding: 14px 20px; border-top: 1px solid var(--border);
+    background: var(--panel);
+  }
+  #promptInput {
+    flex: 1; background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+    color: var(--text); padding: 10px 12px; font-size: 14.5px; outline: none;
+  }
+  #promptInput:focus { border-color: var(--accent); }
+  button {
+    background: var(--accent); border: none; color: white; padding: 0 18px; border-radius: 10px;
+    font-size: 14.5px; cursor: pointer;
+  }
+  button:disabled { opacity: 0.5; cursor: default; }
+  .empty { color: var(--muted); font-size: 13.5px; text-align: center; margin-top: 40px; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Tiny nanoGPT chat</h1>
+    <p>
+      A tiny word-token language model trained from scratch on a small
+      synthetic corpus — it continues text, it does not answer questions like
+      a general assistant. Every prompt starts a fresh context (no memory
+      between messages). <span id="meta">loading model info…</span>
+    </p>
+  </header>
+  <div id="chat">
+    <div class="empty">Send a prompt below. Try an in-vocabulary phrase like
+      "the customer", or an out-of-vocabulary one like "she is happy" to see
+      how unknown words are reported.</div>
+  </div>
+  <div id="inputBar">
+    <input id="promptInput" type="text" placeholder="Type a prompt…" autocomplete="off">
+    <button id="sendBtn">Send</button>
+  </div>
+
+<script>
+const chatEl = document.getElementById('chat');
+const inputEl = document.getElementById('promptInput');
+const sendBtn = document.getElementById('sendBtn');
+const metaEl = document.getElementById('meta');
+
+async function loadInfo() {
+  try {
+    const r = await fetch('/api/info');
+    const d = await r.json();
+    metaEl.textContent =
+      `Run ${d.model_sha256.slice(0, 10)}… · ${d.completed_steps} training steps · ` +
+      `${d.vocabulary_size}-word vocabulary · ${d.block_size}-token context limit.`;
+  } catch (e) {
+    metaEl.textContent = 'Could not load model info.';
+  }
+}
+
+function addBubble(role, text, notices) {
+  const empty = chatEl.querySelector('.empty');
+  if (empty) empty.remove();
+  const row = document.createElement('div');
+  row.className = 'row ' + role;
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.textContent = text;
+  row.appendChild(bubble);
+  chatEl.appendChild(row);
+  if (notices && notices.length) {
+    const n = document.createElement('div');
+    n.className = 'notice';
+    n.style.marginLeft = role === 'model' ? '4px' : '0';
+    n.style.textAlign = role === 'user' ? 'right' : 'left';
+    n.textContent = notices.join(' · ');
+    chatEl.appendChild(n);
+  }
+  chatEl.scrollTop = chatEl.scrollHeight;
+}
+
+async function send() {
+  const prompt = inputEl.value.trim();
+  if (!prompt) return;
+  inputEl.value = '';
+  sendBtn.disabled = true;
+  addBubble('user', prompt);
+  try {
+    const r = await fetch('/api/chat', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({prompt}),
+    });
+    const d = await r.json();
+    if (!r.ok) {
+      addBubble('model', 'Error: ' + (d.error || r.statusText));
+      return;
+    }
+    const notices = [];
+    if (d.unknown_prompt_words && d.unknown_prompt_words.length) {
+      notices.push('Unknown words (treated as <UNK>): ' + d.unknown_prompt_words.join(', '));
+    }
+    if (d.prompt_truncated) {
+      notices.push('Prompt truncated to the model’s context limit.');
+    }
+    addBubble('model', d.response || '[empty response]', notices);
+  } catch (e) {
+    addBubble('model', 'Error: could not reach the server.');
+  } finally {
+    sendBtn.disabled = false;
+    inputEl.focus();
+  }
+}
+
+sendBtn.addEventListener('click', send);
+inputEl.addEventListener('keydown', (e) => { if (e.key === 'Enter') send(); });
+loadInfo();
+</script>
+</body>
+</html>
