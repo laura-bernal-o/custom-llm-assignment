@@ -70,5 +70,19 @@
       "girl"
     ],
     "prompt_truncated": false
+  },
+  {
+    "prompt": "the girl bought the",
+    "seed": 2026,
+    "response": "scooter .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "prompt": "the father is strong , not",
+    "seed": 2027,
+    "response": "weak .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
   }
 ]

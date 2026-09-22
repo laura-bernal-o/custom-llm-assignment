@@ -339,22 +339,34 @@ context per message, same as every other interface here.
 **Launch:**
 ```sh
 pip install -r webapp/requirements.txt
-python webapp/server.py --model llm_runs/20260922T173848_430218Z/model.pt --port 5050
+python webapp/server.py --model llm_runs/20260922T204815_706083Z/model.pt --port 5050
 # then open http://localhost:5050
 ```
 
-The page's header pulls `/api/info` and states the run hash, step count,
-vocabulary size, and context limit up front, and shows an inline
-"Unknown words (treated as `<UNK>`)" notice per reply — the same honesty
-about limitations as the terminal, just in the browser. I tested it live
-(golden path + the same pronoun out-of-vocabulary case as above) before
-committing; both exchanges are saved in
-[`webapp/webapp_chat_log.json`](webapp/webapp_chat_log.json):
+The page includes onboarding for a first-time visitor: a collapsed
+step-by-step explainer, clickable example prompts (including ones that
+deliberately trigger the unknown-word case), and a searchable browser over
+every word the model actually knows (`/api/vocab`). When a prompt contains an
+unknown word, the page shows an explanatory warning box *before* the reply
+and visually marks that reply as unreliable, instead of letting it look like
+a normal answer.
+
+Its default model is a **third, exploratory run** (`llm_runs/20260922T204815_706083Z/`,
+same 3,000 steps / lr 0.001 settings) — not one of the two graded experiments
+above. It adds one more corpus file, [`corpus/people.txt`](corpus/people.txt)
+(person/family words: girl, boy, mother, father, sister, brother, friend,
+neighbor, etc., taught inside the same sentence patterns already learned),
+purely so the chat interface has more to talk about. It's included here for
+transparency, not as part of the required starter/expanded-corpus comparison.
 
 | You | Model | Notice |
 |---|---|---|
 | `the customer` | `selected the item after checking the price .` | — |
-| `maya did not want the soda . she wanted` | `the bank .` | Unknown word: `she` |
+| `the girl bought the` | `scooter .` | — |
+| `the father is strong , not` | `weak .` | — |
+| `maya did not want the soda . she wanted` | *(unreliable)* | Unknown word: `she` — pronouns were never taught |
+
+Full interaction history: [`webapp/webapp_chat_log.json`](webapp/webapp_chat_log.json).
 
 ## What I learned
 

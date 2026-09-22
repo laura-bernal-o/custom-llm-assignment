@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from run_evals import generate_reply, load_model, model_hash  # noqa: E402
 
-DEFAULT_MODEL = ROOT / "llm_runs" / "20260922T173848_430218Z" / "model.pt"
+DEFAULT_MODEL = ROOT / "llm_runs" / "20260922T204815_706083Z" / "model.pt"
 LOG_PATH = Path(__file__).resolve().parent / "webapp_chat_log.json"
 
 app = Flask(__name__)

@@ -1,0 +1,420 @@
+the friend returned the merchandise after checking the price .
+the girl is bright , not dark .
+the man helped the brother .
+the child helped the baby .
+the baby helped the neighbor .
+the sister is long , not short .
+the brother helped the girl .
+the child helped the man .
+the girl is easy , not hard .
+the cousin selected the package after checking the price .
+the man ordered the item after checking the price .
+the brother is cheap , not expensive .
+the baby helped the girl .
+the brother reviewed the brand after checking the price .
+the mother helped the neighbor .
+the friend did not order the lamp . the friend ordered the chair .
+the brother is big , not small .
+the uncle is long , not short .
+the girl did not want the bike . the girl wanted the scooter .
+the brother helped the man .
+the woman is clean , not dirty .
+the mother helped the uncle .
+the sister helped the guest .
+the aunt is narrow , not broad .
+the cousin is sharp , not dull .
+the uncle helped the man .
+the father is narrow , not broad .
+the neighbor helped the uncle .
+the mother is clean , not dirty .
+the father helped the girl .
+the uncle helped the sister .
+the father is strong , not weak .
+the aunt reviewed the brand after checking the price .
+the neighbor helped the boy .
+the man returned the offering after checking the price .
+the baby is narrow , not broad .
+the woman is easy , not hard .
+the guest did not choose the cake . the guest chose the cookies .
+the guest is easy , not hard .
+the father helped the mother .
+the uncle compared the product after checking the price .
+the cousin helped the guest .
+the grandmother recommended the brand after checking the price .
+the baby helped the guest .
+the friend did not choose the pen . the friend chose the pencil .
+the friend helped the boy .
+the girl helped the boy .
+the sister helped the grandmother .
+the grandfather helped the aunt .
+the cousin is clean , not dirty .
+the boy did not like the robe . the boy liked the blanket .
+the uncle is wet , not dry .
+the baby helped the sister .
+the cousin helped the grandmother .
+the grandfather helped the sister .
+the aunt ordered the offering after checking the price .
+the man helped the neighbor .
+the friend is big , not small .
+the cousin did not pick the cake . the cousin picked the cookies .
+the woman did not pick the scarf . the woman picked the jacket .
+the mother is strong , not weak .
+the girl helped the grandfather .
+the boy recommended the product after checking the price .
+the grandfather is cheap , not expensive .
+the friend helped the uncle .
+the brother reviewed the item after checking the price .
+the aunt helped the brother .
+the mother did not order the soda . the mother ordered the coffee .
+the girl recommended the merchandise after checking the price .
+the girl did not order the robe . the girl ordered the blanket .
+the mother is sharp , not dull .
+the cousin helped the grandfather .
+the guest ordered the product after checking the price .
+the brother helped the baby .
+the girl did not buy the robe . the girl bought the blanket .
+the child reviewed the offering after checking the price .
+the guest is bright , not dark .
+the boy ordered the item after checking the price .
+the grandmother did not order the cake . the grandmother ordered the cookies .
+the baby returned the merchandise after checking the price .
+the grandmother is narrow , not broad .
+the aunt helped the boy .
+the aunt did not want the bike . the aunt wanted the scooter .
+the boy is sharp , not dull .
+the mother did not want the mug . the mother wanted the bowl .
+the mother helped the sister .
+the friend recommended the item after checking the price .
+the girl is big , not small .
+the cousin did not want the cake . the cousin wanted the cookies .
+the grandfather helped the brother .
+the grandfather helped the child .
+the brother helped the mother .
+the mother helped the aunt .
+the boy helped the mother .
+the boy reviewed the brand after checking the price .
+the grandfather helped the neighbor .
+the sister is easy , not hard .
+the guest did not buy the kite . the guest bought the drum .
+the boy helped the girl .
+the brother helped the sister .
+the guest is wet , not dry .
+the uncle helped the child .
+the father helped the brother .
+the boy is clean , not dirty .
+the aunt did not pick the robe . the aunt picked the blanket .
+the mother helped the child .
+the guest helped the man .
+the girl is sharp , not dull .
+the friend is bright , not dark .
+the grandmother helped the uncle .
+the father is big , not small .
+the grandmother helped the man .
+the friend helped the mother .
+the woman ordered the item after checking the price .
+the mother helped the grandfather .
+the boy helped the grandmother .
+the sister helped the brother .
+the neighbor did not like the cake . the neighbor liked the cookies .
+the child is strong , not weak .
+the child is bright , not dark .
+the brother is narrow , not broad .
+the woman helped the grandmother .
+the neighbor recommended the product after checking the price .
+the woman helped the guest .
+the child reviewed the item after checking the price .
+the mother did not like the robe . the mother liked the blanket .
+the girl helped the child .
+the neighbor helped the grandfather .
+the child helped the aunt .
+the man compared the brand after checking the price .
+the guest is narrow , not broad .
+the boy helped the neighbor .
+the father recommended the package after checking the price .
+the brother helped the father .
+the friend is strong , not weak .
+the grandmother compared the package after checking the price .
+the neighbor helped the guest .
+the brother is bright , not dark .
+the neighbor is long , not short .
+the neighbor returned the package after checking the price .
+the mother helped the friend .
+the neighbor did not choose the mug . the neighbor chose the bowl .
+the boy helped the sister .
+the woman helped the child .
+the child helped the grandfather .
+the sister helped the neighbor .
+the man compared the merchandise after checking the price .
+the man did not buy the bike . the man bought the scooter .
+the cousin is cheap , not expensive .
+the woman ordered the product after checking the price .
+the brother is strong , not weak .
+the boy did not order the mug . the boy ordered the bowl .
+the mother is long , not short .
+the grandmother reviewed the product after checking the price .
+the girl did not choose the bike . the girl chose the scooter .
+the guest helped the neighbor .
+the woman recommended the merchandise after checking the price .
+the child is wet , not dry .
+the father helped the baby .
+the cousin is big , not small .
+the boy is wet , not dry .
+the aunt helped the friend .
+the man is cheap , not expensive .
+the aunt did not choose the lamp . the aunt chose the chair .
+the uncle helped the neighbor .
+the mother is wet , not dry .
+the uncle helped the guest .
+the man is sharp , not dull .
+the woman helped the friend .
+the man helped the mother .
+the sister is narrow , not broad .
+the girl is long , not short .
+the man helped the baby .
+the woman helped the man .
+the mother is narrow , not broad .
+the girl reviewed the item after checking the price .
+the friend helped the child .
+the guest helped the grandmother .
+the brother helped the cousin .
+the girl reviewed the package after checking the price .
+the sister did not order the lamp . the sister ordered the chair .
+the man helped the father .
+the uncle selected the brand after checking the price .
+the sister helped the woman .
+the mother is easy , not hard .
+the friend is narrow , not broad .
+the child is big , not small .
+the mother helped the woman .
+the woman helped the girl .
+the uncle helped the girl .
+the friend helped the sister .
+the boy helped the brother .
+the girl helped the baby .
+the guest helped the boy .
+the man is strong , not weak .
+the woman is big , not small .
+the woman is strong , not weak .
+the uncle is strong , not weak .
+the baby did not order the hat . the baby ordered the cap .
+the brother selected the offering after checking the price .
+the girl helped the guest .
+the cousin helped the man .
+the woman selected the offering after checking the price .
+the brother selected the package after checking the price .
+the sister helped the mother .
+the friend did not like the kite . the friend liked the drum .
+the guest helped the friend .
+the father helped the grandmother .
+the man is long , not short .
+the baby helped the boy .
+the mother helped the grandmother .
+the boy helped the father .
+the guest did not want the cake . the guest wanted the cookies .
+the aunt is long , not short .
+the mother did not choose the cake . the mother chose the cookies .
+the mother is bright , not dark .
+the grandmother helped the girl .
+the girl did not pick the mug . the girl picked the bowl .
+the woman is bright , not dark .
+the aunt returned the item after checking the price .
+the grandfather helped the man .
+the uncle helped the friend .
+the brother is long , not short .
+the grandfather helped the girl .
+the grandfather compared the merchandise after checking the price .
+the boy is bright , not dark .
+the mother helped the man .
+the grandmother helped the sister .
+the girl helped the cousin .
+the man is narrow , not broad .
+the brother did not order the kite . the brother ordered the drum .
+the grandfather selected the offering after checking the price .
+the grandfather did not buy the lamp . the grandfather bought the chair .
+the aunt is strong , not weak .
+the girl helped the grandmother .
+the grandmother helped the father .
+the father helped the aunt .
+the sister is strong , not weak .
+the baby recommended the brand after checking the price .
+the man helped the friend .
+the grandfather ordered the product after checking the price .
+the baby helped the father .
+the neighbor helped the woman .
+the neighbor helped the sister .
+the aunt did not buy the scarf . the aunt bought the jacket .
+the baby is bright , not dark .
+the man helped the uncle .
+the guest helped the brother .
+the boy is strong , not weak .
+the grandmother helped the cousin .
+the uncle did not choose the soda . the uncle chose the coffee .
+the neighbor helped the cousin .
+the girl helped the sister .
+the father helped the guest .
+the grandfather is strong , not weak .
+the grandfather did not choose the kite . the grandfather chose the drum .
+the man helped the grandfather .
+the child helped the girl .
+the baby is clean , not dirty .
+the grandfather is long , not short .
+the sister is big , not small .
+the boy returned the offering after checking the price .
+the grandmother is strong , not weak .
+the cousin recommended the brand after checking the price .
+the sister reviewed the item after checking the price .
+the grandfather helped the uncle .
+the friend returned the offering after checking the price .
+the sister is sharp , not dull .
+the uncle helped the cousin .
+the man helped the cousin .
+the friend selected the product after checking the price .
+the brother did not buy the soda . the brother bought the coffee .
+the father is cheap , not expensive .
+the boy did not buy the scarf . the boy bought the jacket .
+the grandmother helped the baby .
+the man recommended the package after checking the price .
+the mother helped the brother .
+the father helped the neighbor .
+the cousin helped the friend .
+the friend is long , not short .
+the child reviewed the merchandise after checking the price .
+the child is easy , not hard .
+the guest is big , not small .
+the boy helped the grandfather .
+the sister reviewed the offering after checking the price .
+the woman did not like the hat . the woman liked the cap .
+the friend helped the baby .
+the friend is clean , not dirty .
+the grandfather did not pick the kite . the grandfather picked the drum .
+the baby is strong , not weak .
+the grandfather reviewed the package after checking the price .
+the aunt compared the product after checking the price .
+the brother helped the uncle .
+the cousin is long , not short .
+the neighbor is strong , not weak .
+the father is bright , not dark .
+the brother recommended the product after checking the price .
+the sister did not choose the robe . the sister chose the blanket .
+the child is narrow , not broad .
+the neighbor ordered the brand after checking the price .
+the father did not buy the lamp . the father bought the chair .
+the neighbor helped the brother .
+the guest helped the woman .
+the guest helped the mother .
+the cousin did not like the pen . the cousin liked the pencil .
+the sister helped the father .
+the aunt returned the package after checking the price .
+the woman helped the cousin .
+the aunt did not order the bike . the aunt ordered the scooter .
+the grandmother did not buy the scarf . the grandmother bought the jacket .
+the child did not choose the lamp . the child chose the chair .
+the aunt ordered the merchandise after checking the price .
+the brother helped the neighbor .
+the sister helped the girl .
+the mother recommended the package after checking the price .
+the grandfather is easy , not hard .
+the guest helped the cousin .
+the aunt helped the guest .
+the neighbor did not want the kite . the neighbor wanted the drum .
+the cousin is narrow , not broad .
+the sister did not want the bike . the sister wanted the scooter .
+the grandmother did not want the lamp . the grandmother wanted the chair .
+the grandfather helped the cousin .
+the sister is cheap , not expensive .
+the aunt is big , not small .
+the neighbor did not pick the hat . the neighbor picked the cap .
+the brother is sharp , not dull .
+the neighbor helped the mother .
+the girl returned the brand after checking the price .
+the neighbor helped the girl .
+the friend selected the brand after checking the price .
+the boy did not choose the bike . the boy chose the scooter .
+the baby compared the item after checking the price .
+the boy helped the guest .
+the woman helped the boy .
+the guest did not order the soda . the guest ordered the coffee .
+the woman helped the neighbor .
+the guest is cheap , not expensive .
+the boy helped the woman .
+the neighbor ordered the merchandise after checking the price .
+the neighbor is big , not small .
+the grandmother helped the friend .
+the grandmother helped the neighbor .
+the baby did not buy the lamp . the baby bought the chair .
+the boy is easy , not hard .
+the grandfather helped the boy .
+the friend did not buy the cake . the friend bought the cookies .
+the grandmother helped the brother .
+the child ordered the brand after checking the price .
+the girl helped the father .
+the aunt helped the baby .
+the cousin helped the baby .
+the father is clean , not dirty .
+the aunt helped the sister .
+the sister is bright , not dark .
+the father returned the brand after checking the price .
+the boy is long , not short .
+the baby did not choose the bike . the baby chose the scooter .
+the man compared the product after checking the price .
+the mother ordered the item after checking the price .
+the grandmother is bright , not dark .
+the girl is strong , not weak .
+the cousin ordered the offering after checking the price .
+the cousin helped the woman .
+the grandmother helped the grandfather .
+the grandmother is wet , not dry .
+the father reviewed the offering after checking the price .
+the grandfather did not like the soda . the grandfather liked the coffee .
+the aunt helped the man .
+the cousin did not choose the soda . the cousin chose the coffee .
+the mother compared the brand after checking the price .
+the neighbor helped the grandmother .
+the boy helped the child .
+the child helped the friend .
+the friend is easy , not hard .
+the friend helped the aunt .
+the baby is wet , not dry .
+the grandmother is clean , not dirty .
+the girl helped the neighbor .
+the cousin helped the brother .
+the cousin recommended the item after checking the price .
+the man is big , not small .
+the grandfather helped the friend .
+the cousin helped the aunt .
+the woman helped the uncle .
+the boy reviewed the merchandise after checking the price .
+the uncle reviewed the package after checking the price .
+the grandmother reviewed the offering after checking the price .
+the friend did not pick the robe . the friend picked the blanket .
+the uncle is cheap , not expensive .
+the brother helped the guest .
+the boy is cheap , not expensive .
+the brother is clean , not dirty .
+the uncle helped the mother .
+the father is sharp , not dull .
+the woman is cheap , not expensive .
+the sister helped the man .
+the friend helped the father .
+the girl is narrow , not broad .
+the neighbor helped the aunt .
+the grandmother did not choose the hat . the grandmother chose the cap .
+the grandfather helped the baby .
+the neighbor helped the friend .
+the girl helped the woman .
+the child helped the woman .
+the baby did not want the lamp . the baby wanted the chair .
+the friend helped the guest .
+the man did not choose the scarf . the man chose the jacket .
+the guest helped the aunt .
+the child helped the brother .
+the grandmother did not like the hat . the grandmother liked the cap .
+the neighbor did not buy the soda . the neighbor bought the coffee .
+the father is easy , not hard .
+the cousin helped the mother .
+the guest helped the father .
+the baby is easy , not hard .
+the baby helped the grandfather .
+the child helped the boy .
+the neighbor helped the child .
+the cousin is easy , not hard .

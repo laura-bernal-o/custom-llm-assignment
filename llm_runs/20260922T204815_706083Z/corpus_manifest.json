@@ -1,0 +1,43 @@
+{
+  "files": [
+    {
+      "file": "negation.txt",
+      "bytes": 13114,
+      "sha256": "7b63f047e45859f0073367cf8108e227450f9fa517c87c3ea509f802df987f6e",
+      "warnings": [],
+      "characters": 13114,
+      "passages": 520,
+      "unique_passages": 408,
+      "preview": "wes does not like the hat . wes likes the cap .\nlia did not order the kite . lia ordered the drum .\nthe ticket is not cheap . it is expensive .\nkai said the tree is not young today . it is grown .\nivy did not buy the cake . ivy bought the cookies .\nivy did not pick the pen . ivy picked the pencil .\n"
+    },
+    {
+      "file": "opposites.txt",
+      "bytes": 11091,
+      "sha256": "fceadedd7ad60bc6546dd6f8b5604b0596488ba1b0fd465db660a0454d2197c5",
+      "warnings": [],
+      "characters": 11091,
+      "passages": 260,
+      "unique_passages": 183,
+      "preview": "priya thinks the river looks dry instead of wet .\nnora thinks the shelf looks tight instead of loose .\nthe cloth is cheap , not expensive .\nthe bag is big , not small .\nsam thinks the task looks dull instead of sharp .\na clean stone is the opposite of a dirty stone .\nthe sky is bright , not dark .\no"
+    },
+    {
+      "file": "people.txt",
+      "bytes": 17334,
+      "sha256": "1385f6326ee42a0efa426cb8ac0a475694dc50866ee27f3421b7738f5c02db7c",
+      "warnings": [],
+      "characters": 17334,
+      "passages": 481,
+      "unique_passages": 481,
+      "preview": "the friend returned the merchandise after checking the price .\nthe girl is bright , not dark .\nthe man helped the brother .\nthe child helped the baby .\nthe baby helped the neighbor .\nthe sister is long , not short .\nthe brother helped the girl .\nthe child helped the man .\nthe girl is easy , not hard"
+    }
+  ],
+  "ignored": [],
+  "external_passages": 1261,
+  "mode": "classroom",
+  "base_passages": 6200,
+  "unique_passages": 5664,
+  "new_unique_passages": 1072,
+  "duplicates_removed": 1797,
+  "max_passage_tokens": 47,
+  "split_unit": "deduplicated passage, not source file"
+}
