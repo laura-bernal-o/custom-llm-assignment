@@ -82,11 +82,21 @@
     border-radius: 10px; padding: 8px 12px; font-size: 12.5px; color: #e3c988; line-height: 1.5;
   }
   .empty { color: var(--muted); font-size: 13.5px; text-align: center; margin-top: 20px; }
+  .temp-caption { font-size: 11px; color: var(--muted); margin: -6px 0 0 4px; }
 
-  #inputBar {
-    display: flex; gap: 10px; padding: 14px 20px; border-top: 1px solid var(--border);
-    background: var(--panel);
+  #inputArea {
+    border-top: 1px solid var(--border); background: var(--panel); padding: 10px 20px 14px;
+    flex-shrink: 0;
   }
+  #tempRow {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; margin-bottom: 10px;
+    font-size: 12px; color: var(--muted);
+  }
+  #tempRow label { white-space: nowrap; }
+  #tempSlider { accent-color: var(--accent); width: 140px; }
+  #tempValue { font-family: ui-monospace, monospace; color: var(--text); min-width: 26px; }
+  #tempHint { color: var(--muted); flex-basis: 100%; font-size: 11.5px; }
+  #inputBar { display: flex; gap: 10px; }
   #promptInput {
     flex: 1; background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
     color: var(--text); padding: 10px 12px; font-size: 14.5px; outline: none;
@@ -148,9 +158,17 @@
   <div id="chat">
     <div class="empty">No messages yet — try an example prompt above, or type your own below.</div>
   </div>
-  <div id="inputBar">
-    <input id="promptInput" type="text" placeholder="Type a prompt…" autocomplete="off">
-    <button id="sendBtn">Send</button>
+  <div id="inputArea">
+    <div id="tempRow">
+      <label for="tempSlider">Temperature</label>
+      <input id="tempSlider" type="range" min="0.1" max="1.5" step="0.1" value="0.8">
+      <span id="tempValue">0.8</span>
+      <span id="tempHint">— lower = safer/more predictable, higher = more varied/random. No weights change; this only affects sampling.</span>
+    </div>
+    <div id="inputBar">
+      <input id="promptInput" type="text" placeholder="Type a prompt…" autocomplete="off">
+      <button id="sendBtn">Send</button>
+    </div>
   </div>
 
 <script>
@@ -159,6 +177,9 @@ const inputEl = document.getElementById('promptInput');
 const sendBtn = document.getElementById('sendBtn');
 const metaEl = document.getElementById('meta');
 const vocabSizeInline = document.getElementById('vocabSizeInline');
+const tempSlider = document.getElementById('tempSlider');
+const tempValue = document.getElementById('tempValue');
+tempSlider.addEventListener('input', () => { tempValue.textContent = tempSlider.value; });
 
 const GOOD_EXAMPLES = [
   'the customer', 'we learned about the new', 'the report about the',
@@ -198,6 +219,7 @@ async function loadInfo() {
       `Run ${d.model_sha256.slice(0, 10)}… · ${d.completed_steps} training steps · ` +
       `${d.vocabulary_size}-word vocabulary · ${d.block_size}-token context limit.`;
     vocabSizeInline.textContent = d.vocabulary_size;
+    currentVocabSize = d.vocabulary_size;
   } catch (e) {
     metaEl.textContent = 'Could not load model info.';
   }
@@ -249,7 +271,7 @@ vocabHeader.addEventListener('click', () => {
   if (open && allWords.length === 0) loadVocab();
 });
 
-function addBubble(role, text, notices) {
+function addBubble(role, text, notices, temperature) {
   const empty = chatEl.querySelector('.empty');
   if (empty) empty.remove();
 
@@ -270,12 +292,26 @@ function addBubble(role, text, notices) {
   bubble.textContent = text;
   row.appendChild(bubble);
   chatEl.appendChild(row);
+
+  if (role === 'model' && temperature !== undefined) {
+    const capRow = document.createElement('div');
+    capRow.className = 'row model';
+    const cap = document.createElement('div');
+    cap.className = 'temp-caption';
+    cap.textContent = `sampled at temperature ${temperature}`;
+    capRow.appendChild(cap);
+    chatEl.appendChild(capRow);
+  }
+
   chatEl.scrollTop = chatEl.scrollHeight;
 }
+
+let currentVocabSize = null;
 
 async function send() {
   const prompt = inputEl.value.trim();
   if (!prompt) return;
+  const temperature = parseFloat(tempSlider.value);
   inputEl.value = '';
   sendBtn.disabled = true;
   addBubble('user', prompt);
@@ -283,7 +319,7 @@ async function send() {
     const r = await fetch('/api/chat', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({prompt}),
+      body: JSON.stringify({prompt, temperature}),
     });
     const d = await r.json();
     if (!r.ok) {
@@ -294,8 +330,9 @@ async function send() {
     if (d.unknown_prompt_words && d.unknown_prompt_words.length) {
       const words = d.unknown_prompt_words.map(w => `"${w}"`).join(', ');
       const plural = d.unknown_prompt_words.length > 1 ? 'words are' : 'word is';
+      const vocabSize = currentVocabSize ?? 'its';
       notices.push(
-        `${words} — this ${plural} not in the model's 251-word vocabulary, so ` +
+        `${words} — this ${plural} not in the model's ${vocabSize}-word vocabulary, so ` +
         `${d.unknown_prompt_words.length > 1 ? 'they were' : 'it was'} replaced with a ` +
         `placeholder token before generating. The reply below is unreliable — try a word ` +
         `from the vocabulary browser instead.`
@@ -304,7 +341,7 @@ async function send() {
     if (d.prompt_truncated) {
       notices.push("Your prompt was longer than the model's 48-token context, so only the end of it was used.");
     }
-    addBubble('model', d.response || '[The model generated nothing for this prompt.]', notices);
+    addBubble('model', d.response || '[The model generated nothing for this prompt.]', notices, temperature);
   } catch (e) {
     addBubble('model', 'Error: could not reach the server.');
   } finally {

@@ -349,7 +349,12 @@ deliberately trigger the unknown-word case), and a searchable browser over
 every word the model actually knows (`/api/vocab`). When a prompt contains an
 unknown word, the page shows an explanatory warning box *before* the reply
 and visually marks that reply as unreliable, instead of letting it look like
-a normal answer.
+a normal answer. A **temperature slider** (0.1–1.5, sent per-request to
+`/api/chat`) lets you control sampling live — e.g. `the opposite of big is`
+is the model's top prediction 29% of the time at the default 0.8 (it can also
+land on `not`, `dry`, or rarer words), but at 0.2 it reliably returns `small`.
+Each reply is labeled with the temperature that produced it. No weights ever
+change; this only affects how the next-token distribution is sampled.
 
 Its default model is a **third, exploratory run** (`llm_runs/20260922T204815_706083Z/`,
 same 3,000 steps / lr 0.001 settings) — not one of the two graded experiments

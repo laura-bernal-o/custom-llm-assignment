@@ -69,10 +69,18 @@ def chat():
     prompt = (payload.get("prompt") or "").strip()
     if not prompt:
         return jsonify({"error": "Empty prompt."}), 400
+    temperature = payload.get("temperature", 0.8)
+    try:
+        temperature = float(temperature)
+    except (TypeError, ValueError):
+        return jsonify({"error": "Temperature must be a number."}), 400
+    if not (0.05 <= temperature <= 2.0):
+        return jsonify({"error": "Temperature must be between 0.05 and 2.0."}), 400
     seed = 2026 + state["turns"]
-    reply = generate_reply(state["model"], state["vocabulary"], prompt, seed=seed)
+    reply = generate_reply(state["model"], state["vocabulary"], prompt, seed=seed,
+                            temperature=temperature)
     state["turns"] += 1
-    append_log({"prompt": prompt, "seed": seed, **reply})
+    append_log({"prompt": prompt, "seed": seed, "temperature": temperature, **reply})
     return jsonify(reply)
 
 
