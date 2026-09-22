@@ -44,9 +44,51 @@ CORPUS_FOLDER = "corpus"   # Add .pdf, .txt and .md files here, including subfol
 TRAINING_STEPS = 3000      # 10 for setup; 3000 for the main experiment
 LEARNING_RATE = 0.001
 # %% [markdown]
-# ### My prediction
-# Replace this text with your choices, reasons, and expected changes in generated
-# text, validation loss, and neighbors of a word you choose to inspect.
+# ### My prediction — starter-corpus experiment
+# **Corpus:** `CORPUS = "classroom"` (the supplied synthetic sentences, no extra
+# files yet). It repeats a small set of frame sentences across 8 domains
+# (business, food, transport, software, health, education, banking, retail), so
+# the same nouns keep appearing next to the same contexts and place words.
+#
+# **Training steps: 10, then 3,000.** The assignment's own guidance is to use 10
+# steps purely as a setup check (confirm the pipeline runs, nothing more — a
+# 10-step model should barely be better than random), then 3,000 steps as the
+# real experiment. 3,000 steps at batch size 32 means the model sees roughly
+# 96,000 document-samples (with repetition), which for ~4,500 unique training
+# passages built from a handful of fixed sentence frames should be enough to
+# memorize the frames' local structure without needing a huge budget.
+#
+# **Learning rate: 0.001**, with warmup + cosine decay already built into the
+# training loop. This is a conservative, standard AdamW starting point for a
+# tiny transformer: high enough to make visible progress in a few thousand
+# steps, low enough (combined with warmup) that the loss shouldn't spike or
+# diverge early. A much larger rate risks the loss oscillating or exploding
+# before it settles; a much smaller rate would mean 3,000 steps barely dents
+# the loss at all.
+#
+# **What I expect to change:**
+# - Training and validation loss should fall sharply and together (they're
+#   different passages from the *same* templates), leveling off well below
+#   the untrained loss — the untrained loss should sit near ln(vocab size),
+#   i.e. what a model guessing uniformly at random over the token vocabulary
+#   would score.
+# - Generated samples should move from unstructured token soup (untrained) to
+#   short sequences that look like fragments of the training frames — correct
+#   domain words in roughly the right slots — though not fully coherent,
+#   original sentences, since the corpus is small and highly repetitive.
+# - The `starter_patterns` eval group (16 cases using the exact trained
+#   sentence frames) should improve the most. `starter_transfer` (8 cases,
+#   same vocabulary in new phrasings) should improve less, since it tests
+#   whether the model generalizes beyond the literal frames it saw.
+#   `extend_corpus` (24 cases covering negation, opposites, spatial relations,
+#   etc.) should **not** improve at all this run — that vocabulary and those
+#   sentence patterns simply aren't in the starter corpus, so more steps on
+#   this corpus can't teach them. That's the motivation for the second,
+#   corpus-extension experiment below.
+# - The embedding of a frequent word like "customer" should move from its
+#   random initialization toward a region nearer other words that share its
+#   contexts (e.g. "client", "buyer", "subscriber"), since the model has no
+#   signal except which tokens co-occur in similar positions.
 #
 # ## 2. Load the tools and network
 # Colab generally includes PyTorch. Locally, install requirements.txt first.
@@ -599,6 +641,41 @@ chat_record = json.loads(chat_file.read_text()) if chat_file.exists() else {
     "fresh_context_per_prompt":True, "temperature":0.8, "max_tokens":24, "turns":[]}
 if chat_record["model_sha256"] != model_hash(model):
     raise ValueError("The model changed. Start a new run instead of mixing chat evidence.")
+chat_seed = 2026 + len(chat_record["turns"])
+reply = generate_reply(model, vocabulary, CHAT_PROMPT, seed=chat_seed)
+print("You:", CHAT_PROMPT, "\nModel:", reply["response"] or "[empty response]")
+if reply["unknown_prompt_words"]:
+    print("Unknown words:", reply["unknown_prompt_words"])
+if reply["prompt_truncated"]:
+    print("Long prompt: only the most recent 48 tokens were used.")
+chat_record["turns"].append({"prompt":CHAT_PROMPT, "seed":chat_seed, **reply})
+save_json("chat_transcript.json",chat_record)
+archive = shutil.make_archive(str(run_dir),"zip",run_dir)
+print("Saved chat and refreshed ZIP:", archive)
+# %% [markdown]
+# A second real interaction: a longer in-vocabulary prefix from the same
+# classroom domains, to see whether the continuation stays on-topic further out.
+# %%
+CHAT_PROMPT = "we learned about the new"
+chat_seed = 2026 + len(chat_record["turns"])
+reply = generate_reply(model, vocabulary, CHAT_PROMPT, seed=chat_seed)
+print("You:", CHAT_PROMPT, "\nModel:", reply["response"] or "[empty response]")
+if reply["unknown_prompt_words"]:
+    print("Unknown words:", reply["unknown_prompt_words"])
+if reply["prompt_truncated"]:
+    print("Long prompt: only the most recent 48 tokens were used.")
+chat_record["turns"].append({"prompt":CHAT_PROMPT, "seed":chat_seed, **reply})
+save_json("chat_transcript.json",chat_record)
+archive = shutil.make_archive(str(run_dir),"zip",run_dir)
+print("Saved chat and refreshed ZIP:", archive)
+# %% [markdown]
+# A third real interaction, deliberately outside the starter classroom domains
+# (a negation pattern with a name and objects the starter corpus never saw).
+# In the starter-corpus experiment this should show unknown-word or empty-
+# response limitations; in the corpus-extension experiment (after adding
+# negation/opposites teaching material) it is a direct before/after comparison.
+# %%
+CHAT_PROMPT = "maya did not want the soda . she wanted"
 chat_seed = 2026 + len(chat_record["turns"])
 reply = generate_reply(model, vocabulary, CHAT_PROMPT, seed=chat_seed)
 print("You:", CHAT_PROMPT, "\nModel:", reply["response"] or "[empty response]")

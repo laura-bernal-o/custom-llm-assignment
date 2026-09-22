@@ -1,0 +1,38 @@
+{
+  "model_sha256": "719901600567092ca37b0507410d783c737d9177a0e0a6cd63510c9d94cc93eb",
+  "completed_steps": 3000,
+  "fresh_context_per_prompt": true,
+  "temperature": 0.8,
+  "max_tokens": 24,
+  "turns": [
+    {
+      "prompt": "the customer",
+      "seed": 2026,
+      "response": "selected the item after checking the price .",
+      "unknown_prompt_words": [],
+      "prompt_truncated": false
+    },
+    {
+      "prompt": "we learned about the new",
+      "seed": 2027,
+      "response": "professor during a discussion of learning .",
+      "unknown_prompt_words": [],
+      "prompt_truncated": false
+    },
+    {
+      "prompt": "maya did not want the soda . she wanted",
+      "seed": 2028,
+      "response": "the different system our station focused on traffic helped us understand the important taxi lecturer during a review of travel helped us understand the",
+      "unknown_prompt_words": [
+        "did",
+        "maya",
+        "not",
+        "she",
+        "soda",
+        "want",
+        "wanted"
+      ],
+      "prompt_truncated": false
+    }
+  ]
+}

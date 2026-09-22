@@ -1,0 +1,32 @@
+{
+  "model_sha256": "4056a8eb1f9f24db6563b4e385428e6edf670f857bc39401e8d90c287417c68a",
+  "completed_steps": 3000,
+  "fresh_context_per_prompt": true,
+  "temperature": 0.8,
+  "max_tokens": 24,
+  "turns": [
+    {
+      "prompt": "the customer",
+      "seed": 2026,
+      "response": "selected the item after checking the price .",
+      "unknown_prompt_words": [],
+      "prompt_truncated": false
+    },
+    {
+      "prompt": "we learned about the new",
+      "seed": 2027,
+      "response": "credit during a discussion of return .",
+      "unknown_prompt_words": [],
+      "prompt_truncated": false
+    },
+    {
+      "prompt": "maya did not want the soda . she wanted",
+      "seed": 2028,
+      "response": "the lesson .",
+      "unknown_prompt_words": [
+        "she"
+      ],
+      "prompt_truncated": false
+    }
+  ]
+}

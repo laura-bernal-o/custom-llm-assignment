@@ -1,0 +1,260 @@
+priya thinks the river looks dry instead of wet .
+nora thinks the shelf looks tight instead of loose .
+the cloth is cheap , not expensive .
+the bag is big , not small .
+sam thinks the task looks dull instead of sharp .
+a clean stone is the opposite of a dirty stone .
+the sky is bright , not dark .
+omar thinks the blanket looks dirty instead of clean .
+the stone is easy , not hard .
+the opposite of broad is narrow .
+a strong bag is the opposite of a weak bag .
+a sharp road is the opposite of a dull road .
+maria thinks the room looks broad instead of narrow .
+the cloth is cheap , not expensive .
+the road is strong , not weak .
+the bag is big , not small .
+the rope is long , not short .
+ben thinks the trail looks old instead of young .
+the blanket is clean , not dirty .
+a young river is the opposite of a old river .
+the cloth is cheap , not expensive .
+the stone is easy , not hard .
+maria thinks the blanket looks dirty instead of clean .
+a easy blanket is the opposite of a hard blanket .
+ana thinks the cloth looks expensive instead of cheap .
+leo thinks the sky looks dark instead of bright .
+the task is sharp , not dull .
+priya thinks the task looks dull instead of sharp .
+the trail is young , not old .
+the opposite of loose is tight .
+the stone is easy , not hard .
+the task is sharp , not dull .
+maria thinks the sky looks dark instead of bright .
+zara thinks the blanket looks dirty instead of clean .
+the cloth is cheap , not expensive .
+omar thinks the stone looks hard instead of easy .
+ana thinks the sky looks dark instead of bright .
+omar thinks the task looks dull instead of sharp .
+the cloth is cheap , not expensive .
+a big rope is the opposite of a small rope .
+the room is narrow , not broad .
+ben thinks the cloth looks expensive instead of cheap .
+the opposite of dry is wet .
+leo thinks the rope looks short instead of long .
+a bright road is the opposite of a dark road .
+the blanket is clean , not dirty .
+a strong blanket is the opposite of a weak blanket .
+the task is sharp , not dull .
+the trail is young , not old .
+zara thinks the cloth looks expensive instead of cheap .
+the river is wet , not dry .
+the stone is easy , not hard .
+a long blanket is the opposite of a short blanket .
+kai thinks the room looks broad instead of narrow .
+maria thinks the cloth looks expensive instead of cheap .
+the sky is bright , not dark .
+priya thinks the stone looks hard instead of easy .
+a sharp rope is the opposite of a dull rope .
+the opposite of dull is sharp .
+the blanket is clean , not dirty .
+maria thinks the task looks dull instead of sharp .
+a narrow river is the opposite of a broad river .
+the trail is young , not old .
+kai thinks the bag looks small instead of big .
+a big blanket is the opposite of a small blanket .
+leo thinks the bag looks small instead of big .
+the rope is long , not short .
+a narrow road is the opposite of a broad road .
+the road is strong , not weak .
+nora thinks the trail looks old instead of young .
+priya thinks the trail looks old instead of young .
+the task is sharp , not dull .
+maria thinks the road looks weak instead of strong .
+nora thinks the rope looks short instead of long .
+the rope is long , not short .
+sam thinks the bag looks small instead of big .
+a sharp blanket is the opposite of a dull blanket .
+the river is wet , not dry .
+a clean rope is the opposite of a dirty rope .
+zara thinks the river looks dry instead of wet .
+leo thinks the trail looks old instead of young .
+the opposite of long is short .
+the opposite of dirty is clean .
+ana thinks the shelf looks tight instead of loose .
+ben thinks the road looks weak instead of strong .
+leo thinks the shelf looks tight instead of loose .
+the opposite of short is long .
+leo thinks the cloth looks expensive instead of cheap .
+the road is strong , not weak .
+the sky is bright , not dark .
+a strong road is the opposite of a weak road .
+a loose road is the opposite of a tight road .
+priya thinks the bag looks small instead of big .
+the sky is bright , not dark .
+the bag is big , not small .
+omar thinks the room looks broad instead of narrow .
+the rope is long , not short .
+the room is narrow , not broad .
+the road is strong , not weak .
+a narrow blanket is the opposite of a broad blanket .
+a strong rope is the opposite of a weak rope .
+the shelf is loose , not tight .
+ana thinks the blanket looks dirty instead of clean .
+the bag is big , not small .
+a long river is the opposite of a short river .
+kai thinks the shelf looks tight instead of loose .
+a narrow bag is the opposite of a broad bag .
+the road is strong , not weak .
+a big bag is the opposite of a small bag .
+a clean road is the opposite of a dirty road .
+the opposite of hard is easy .
+a wet rope is the opposite of a dry rope .
+maria thinks the shelf looks tight instead of loose .
+the shelf is loose , not tight .
+sam thinks the blanket looks dirty instead of clean .
+the task is sharp , not dull .
+the shelf is loose , not tight .
+a cheap blanket is the opposite of a expensive blanket .
+ben thinks the task looks dull instead of sharp .
+the road is strong , not weak .
+the opposite of narrow is broad .
+a sharp stone is the opposite of a dull stone .
+priya thinks the blanket looks dirty instead of clean .
+the road is strong , not weak .
+the opposite of strong is weak .
+the river is wet , not dry .
+a cheap rope is the opposite of a expensive rope .
+zara thinks the rope looks short instead of long .
+the task is sharp , not dull .
+the cloth is cheap , not expensive .
+the opposite of wet is dry .
+the opposite of old is young .
+kai thinks the stone looks hard instead of easy .
+the river is wet , not dry .
+omar thinks the river looks dry instead of wet .
+a narrow stone is the opposite of a broad stone .
+a long road is the opposite of a short road .
+a sharp river is the opposite of a dull river .
+nora thinks the bag looks small instead of big .
+a loose river is the opposite of a tight river .
+a easy river is the opposite of a hard river .
+zara thinks the stone looks hard instead of easy .
+the task is sharp , not dull .
+sam thinks the sky looks dark instead of bright .
+the opposite of bright is dark .
+a clean blanket is the opposite of a dirty blanket .
+leo thinks the river looks dry instead of wet .
+ana thinks the stone looks hard instead of easy .
+the stone is easy , not hard .
+a young road is the opposite of a old road .
+the sky is bright , not dark .
+the cloth is cheap , not expensive .
+zara thinks the road looks weak instead of strong .
+the stone is easy , not hard .
+the stone is easy , not hard .
+a wet road is the opposite of a dry road .
+a easy road is the opposite of a hard road .
+ben thinks the rope looks short instead of long .
+the sky is bright , not dark .
+leo thinks the room looks broad instead of narrow .
+maria thinks the rope looks short instead of long .
+the shelf is loose , not tight .
+maria thinks the river looks dry instead of wet .
+the room is narrow , not broad .
+the trail is young , not old .
+the blanket is clean , not dirty .
+nora thinks the task looks dull instead of sharp .
+priya thinks the road looks weak instead of strong .
+a long stone is the opposite of a short stone .
+the opposite of expensive is cheap .
+the blanket is clean , not dirty .
+sam thinks the road looks weak instead of strong .
+the blanket is clean , not dirty .
+a clean bag is the opposite of a dirty bag .
+a cheap river is the opposite of a expensive river .
+kai thinks the cloth looks expensive instead of cheap .
+the blanket is clean , not dirty .
+zara thinks the trail looks old instead of young .
+the opposite of weak is strong .
+priya thinks the rope looks short instead of long .
+leo thinks the task looks dull instead of sharp .
+kai thinks the sky looks dark instead of bright .
+the blanket is clean , not dirty .
+the sky is bright , not dark .
+a wet stone is the opposite of a dry stone .
+the shelf is loose , not tight .
+priya thinks the sky looks dark instead of bright .
+sam thinks the shelf looks tight instead of loose .
+the rope is long , not short .
+the opposite of tight is loose .
+the rope is long , not short .
+sam thinks the rope looks short instead of long .
+the room is narrow , not broad .
+maria thinks the trail looks old instead of young .
+sam thinks the stone looks hard instead of easy .
+a bright rope is the opposite of a dark rope .
+omar thinks the shelf looks tight instead of loose .
+leo thinks the blanket looks dirty instead of clean .
+ana thinks the trail looks old instead of young .
+the rope is long , not short .
+sam thinks the trail looks old instead of young .
+the shelf is loose , not tight .
+the river is wet , not dry .
+omar thinks the rope looks short instead of long .
+the opposite of dark is bright .
+ana thinks the bag looks small instead of big .
+a young bag is the opposite of a old bag .
+the bag is big , not small .
+the bag is big , not small .
+a strong stone is the opposite of a weak stone .
+priya thinks the cloth looks expensive instead of cheap .
+the river is wet , not dry .
+ben thinks the stone looks hard instead of easy .
+kai thinks the road looks weak instead of strong .
+a loose rope is the opposite of a tight rope .
+the sky is bright , not dark .
+ben thinks the blanket looks dirty instead of clean .
+the road is strong , not weak .
+nora thinks the cloth looks expensive instead of cheap .
+the sky is bright , not dark .
+sam thinks the room looks broad instead of narrow .
+leo thinks the road looks weak instead of strong .
+ben thinks the shelf looks tight instead of loose .
+a easy stone is the opposite of a hard stone .
+nora thinks the blanket looks dirty instead of clean .
+the stone is easy , not hard .
+the stone is easy , not hard .
+a young stone is the opposite of a old stone .
+the bag is big , not small .
+the shelf is loose , not tight .
+a young blanket is the opposite of a old blanket .
+the river is wet , not dry .
+omar thinks the road looks weak instead of strong .
+the sky is bright , not dark .
+the cloth is cheap , not expensive .
+maria thinks the bag looks small instead of big .
+a easy rope is the opposite of a hard rope .
+kai thinks the task looks dull instead of sharp .
+maria thinks the stone looks hard instead of easy .
+leo thinks the stone looks hard instead of easy .
+nora thinks the room looks broad instead of narrow .
+a loose blanket is the opposite of a tight blanket .
+a wet river is the opposite of a dry river .
+the opposite of young is old .
+a long rope is the opposite of a short rope .
+a big road is the opposite of a small road .
+a big river is the opposite of a small river .
+ana thinks the river looks dry instead of wet .
+the trail is young , not old .
+the trail is young , not old .
+omar thinks the trail looks old instead of young .
+a loose bag is the opposite of a tight bag .
+a bright stone is the opposite of a dark stone .
+the room is narrow , not broad .
+a wet bag is the opposite of a dry bag .
+the opposite of cheap is expensive .
+a long bag is the opposite of a short bag .
+priya thinks the room looks broad instead of narrow .
+kai thinks the blanket looks dirty instead of clean .
+a easy bag is the opposite of a hard bag .
